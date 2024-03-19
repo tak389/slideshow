@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "type": "image",
+      "path": "/images/image1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "audio",
+      "path": "sound01.mp3"
+    },
+    {
+      "id": 3,
+      "type": "audio",
+      "path": "music01.mp3"
+    }
+]

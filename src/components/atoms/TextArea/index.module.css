@@ -1,0 +1,6 @@
+.textarea {
+    border: 1px solid green;
+    outline: none;
+    resize: none;
+    width: 95%;
+}
