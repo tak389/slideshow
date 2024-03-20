@@ -1,0 +1,11 @@
+.slide_wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide_area {
+  width: 600%;
+  height: 100%;
+  display: flex;
+}
