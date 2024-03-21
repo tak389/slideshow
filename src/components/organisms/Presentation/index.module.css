@@ -4,7 +4,14 @@
     font-size: 16px;
     display: flex;
     text-align: center;
-    justify-content: center;
     align-items: center;
-    flex-flow: column;
+    background-color: #444444;
+}
+
+.presentation_text_area {
+    width: 50%;
+}
+
+.presentation_image_area {
+    width: 50%;
 }

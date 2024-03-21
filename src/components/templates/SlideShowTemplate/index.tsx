@@ -12,10 +12,10 @@ type Props = {
             id: number
             title: string
             text: string
+            image: string
         }[],
-        media: {
+        sounds: {
             id: number
-            type: string
             path: string
         }[]
     }
@@ -28,7 +28,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     useEffect(() => {
         setData(props)
     }, [pageIndex])
-    console.log(props)
+
     const slidePrevPage = (): void => {
         if (pageIndex <= 0) return // TODO alert等追加する
         const index = pageIndex - 1
@@ -49,7 +49,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     const playSound = (): void => {
-        const sound = new Audio(props.data.media[1].path)
+        const sound = new Audio(props.data.sounds[0].path)
         sound.play()
     }
 
@@ -62,8 +62,8 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                 <Swiper>
                     <SwiperSlide>
                         <div className={styles.slide_area} style={scrollStyle}>
-                            {data.data.pages.map((d) => {
-                                return <Presentation title={d.title} text={d.text} key={d.id} />
+                            {data.data.pages.map((page) => {
+                                return <Presentation title={page.title} text={page.text} image={page.image} key={page.id} />
                             })}
                         </div>
                     </SwiperSlide>
@@ -73,7 +73,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                 <SlideButton onClick={slideNextPage}>＞</SlideButton>
             </span>
             <div>
-                <SoundButton sound={props.data.media[2].path}></SoundButton>
+                <SoundButton sound={props.data.sounds[1].path}></SoundButton>
             </div>
         </div>
     )

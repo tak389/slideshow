@@ -8,21 +8,21 @@ type Data = {
         id: number
         title: string
         text: string
+        image: string
     }[],
-    media: {
+    sounds: {
         id: number
-        type: string
         path: string
     }[]
   }
 }
 
-  const initData: Data = {
-    data: {
-      pages: [],
-      media: []
-    }
+const initData: Data = {
+  data: {
+    pages: [],
+    sounds: []
   }
+}
 
 const SlideShowPage = (): JSX.Element => {
   const [jsonData, setJsonData] = useState<Data>(initData)
