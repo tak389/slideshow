@@ -1,11 +1,23 @@
-.slide_wrapper {
+.template {
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  background-color: #444444;
+  display: flex;
+  justify-content: center;
+
+  .outside {
+    display: flex;
+    align-items: center;
+  }
+
+  .slide_wrapper {
+    width: 88%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
 }
 
 .slide_area {
-  width: 600%;
-  height: 100%;
+  width: 700%;
   display: flex;
 }

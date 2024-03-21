@@ -1,6 +1,13 @@
 .button {
-    background-color: green;
+    background-color: #444444;
+    outline: none;
     color: white;
     border-radius: 3px;
     cursor: pointer;
+    border: none;
+}
+
+.button:focus {
+    outline: none;
+    background: transparent;
 }

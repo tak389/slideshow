@@ -44,7 +44,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     const scrollStyle = {
-        transform: `translateX(-${pageIndex * 16.66}%)`,
+        transform: `translateX(-${pageIndex * 14.2}%)`,
         transition: 'transform 0.5s ease'
     }
 
@@ -54,7 +54,10 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     return (
-        <div className=''>
+        <div className={styles.template}>
+            <span className={styles.outside}>
+                <SlideButton onClick={slidePrevPage}>＜</SlideButton>
+            </span>
             <div className={styles.slide_wrapper}>
                 <Swiper>
                     <SwiperSlide>
@@ -65,11 +68,12 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                <div className=''>
-                    <SlideButton onClick={slidePrevPage}>戻る</SlideButton>
-                    <SlideButton onClick={slideNextPage}>次へ</SlideButton>
-                    <SoundButton sound={props.data.media[2].path}></SoundButton>
-                </div>
+            </div>
+            <span className={styles.outside}>
+                <SlideButton onClick={slideNextPage}>＞</SlideButton>
+            </span>
+            <div>
+                <SoundButton sound={props.data.media[2].path}></SoundButton>
             </div>
         </div>
     )

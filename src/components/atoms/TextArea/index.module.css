@@ -1,6 +1,12 @@
 .textarea {
-    border: 1px solid green;
+    border: none;
     outline: none;
+    overflow: hidden;
     resize: none;
     width: 95%;
+    height: 500px;
+    font-size: 16px;
+    background-color: #222222;
+    color: #FFFFFF;
+    padding: 5vh 2vw 0;
 }
