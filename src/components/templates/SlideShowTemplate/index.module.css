@@ -3,6 +3,7 @@
   background-color: #222222;
   display: flex;
   justify-content: center;
+  padding-top: 3vh;
 
   .outside {
     display: flex;
@@ -20,4 +21,10 @@
 .slide_area {
   width: 700%;
   display: flex;
+}
+
+.sound_bar {
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
 }

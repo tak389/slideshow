@@ -54,26 +54,28 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     return (
-        <div className={styles.template}>
-            <span className={styles.outside}>
-                <SlideButton onClick={slidePrevPage}>＜</SlideButton>
-            </span>
-            <div className={styles.slide_wrapper}>
-                <Swiper>
-                    <SwiperSlide>
-                        <div className={styles.slide_area} style={scrollStyle}>
-                            {data.data.pages.map((page) => {
-                                return <Presentation title={page.title} text={page.text} image={page.image} key={page.id} />
-                            })}
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
+        <div>
+            <div className={styles.template}>
+                <span className={styles.outside}>
+                    <SlideButton onClick={slidePrevPage}>＜</SlideButton>
+                </span>
+                <div className={styles.slide_wrapper}>
+                    <Swiper>
+                        <SwiperSlide>
+                            <div className={styles.slide_area} style={scrollStyle}>
+                                {data.data.pages.map((page) => {
+                                    return <Presentation title={page.title} text={page.text} image={page.image} key={page.id} />
+                                })}
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <span className={styles.outside}>
+                    <SlideButton onClick={slideNextPage}>＞</SlideButton>
+                </span>
             </div>
-            <span className={styles.outside}>
-                <SlideButton onClick={slideNextPage}>＞</SlideButton>
-            </span>
-            <div>
-                <SoundButton sound={props.data.sounds[1].path}></SoundButton>
+            <div className={styles.sound_bar}>
+                <SoundButton path={props.data.sounds[1].path}></SoundButton>
             </div>
         </div>
     )

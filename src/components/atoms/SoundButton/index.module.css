@@ -1,0 +1,23 @@
+.play_button {
+    background-color: #008000;
+    color: #FFFFFF;
+    margin: 3vh 1vw;
+    width: 5vw;
+    border-radius: 5px;
+}
+
+.stop_button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    margin: 3vh 1vw;
+    width: 5vw;
+    border-radius: 5px;
+}
+
+.pause_button {
+    background-color: #C0C0C0;
+    color: #FFFFFF;
+    margin: 3vh 1vw;
+    width: 5vw;
+    border-radius: 5px;
+}

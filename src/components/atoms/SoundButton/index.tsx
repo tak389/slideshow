@@ -1,18 +1,23 @@
-// @ts-ignore //TODO
-import useSound from 'use-sound';
+// import useSound from 'use-sound';
+import styles from './index.module.css'
 
 type Props = {
-  sound: string
+  path: string
 }
 
 const SoundButton = (props :Props): JSX.Element => {
-  const [play, { stop, pause }] = useSound(props.sound)
+  const audio = new Audio(props.path)
+
+  const stop = () => {
+    audio.pause()
+    audio.currentTime = 0
+  }
 
   return (
-    <div className=''>
-      <button onClick={() => play()}>▷</button>
-      <button onClick={() => stop()}>□</button>
-      <button onClick={() => pause()}>＝</button>
+    <div className={styles.button}>
+      <button className={styles.play_button} onClick={() => audio.play()}>▷</button>
+      <button className={styles.stop_button} onClick={stop}>□</button>
+      <button className={styles.pause_button} onClick={() => audio.pause()}>||</button>
     </div>
   )
 }
