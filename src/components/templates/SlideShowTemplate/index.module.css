@@ -6,8 +6,9 @@
   padding-top: 3vh;
 
   .outside {
+    width: 5vw;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 
   .slide_wrapper {
