@@ -25,6 +25,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     const [pageIndex, setPageIndex] = useState<number>(0)
     const [data, setData] = useState<Props>(props)
     const pageMax: number = props.data.pages.length - 1
+    const scrollArea = Math.floor((100 / props.data.pages.length * 10)) / 10
 
     useEffect(() => {
         setData(props)
@@ -43,7 +44,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     const scrollStyle = {
-        transform: `translateX(-${pageIndex * 14.2}%)`,
+        transform: `translateX(-${pageIndex * scrollArea}%)`,
         transition: 'transform 0.5s ease'
     }
 
@@ -54,11 +55,9 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
 
     return (
         <div>
-            <div className={styles.template}>
+            <div className={styles.Template}>
                 <span className={styles.outside}>
-                    {pageIndex !== 0 && 
-                        <SlideButton onClick={slidePrevPage}>＜</SlideButton>
-                    }
+                    {pageIndex !== 0 && <SlideButton onClick={slidePrevPage}>＜</SlideButton> }
                 </span>
                 <div className={styles.slide_wrapper}>
                     <Swiper>
@@ -72,12 +71,10 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                     </Swiper>
                 </div>
                 <span className={styles.outside}>
-                    {pageIndex !== pageMax && 
-                        <SlideButton onClick={slideNextPage}>＞</SlideButton>
-                    }
+                    {pageIndex !== pageMax && <SlideButton onClick={slideNextPage}>＞</SlideButton> }
                 </span>
             </div>
-            <div className={styles.sound_bar}>
+            <div className={styles.Sound_bar}>
                 <SoundButton path={props.data.sounds[1].path}></SoundButton>
             </div>
         </div>
