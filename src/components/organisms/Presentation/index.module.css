@@ -1,17 +1,16 @@
-.presentation_area {
+.Presentation_area {
     width: 14.2%;
-    height: 100%;
     font-size: 16px;
     display: flex;
     text-align: center;
     align-items: center;
     background-color: #444444;
-}
 
-.presentation_text_area {
-    width: 50%;
-}
+    .presentation_text_area {
+        width: 50%;
+    }
 
-.presentation_image_area {
-    width: 50%;
+    .presentation_image_area {
+        width: 50%;
+    }
 }

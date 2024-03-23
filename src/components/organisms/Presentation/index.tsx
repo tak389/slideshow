@@ -11,7 +11,7 @@ type Props = {
 
 const Presentation = (props: Props): JSX.Element => {
     return (
-        <div className={styles.presentation_area}>
+        <div className={styles.Presentation_area} >
             <div className={styles.presentation_text_area}>
                 <Text>{props.title}</Text>
                 <TextArea>{props.text}</TextArea>
