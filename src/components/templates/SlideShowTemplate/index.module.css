@@ -9,6 +9,7 @@
     width: 5vw;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .slide_wrapper {
