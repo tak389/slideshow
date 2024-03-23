@@ -24,20 +24,19 @@ type Props = {
 const SlideShowTemplate = (props: Props): JSX.Element => {
     const [pageIndex, setPageIndex] = useState<number>(0)
     const [data, setData] = useState<Props>(props)
+    const pageMax: number = props.data.pages.length - 1
 
     useEffect(() => {
         setData(props)
     }, [pageIndex])
 
     const slidePrevPage = (): void => {
-        if (pageIndex <= 0) return // TODO alert等追加する
         const index = pageIndex - 1
         setPageIndex(index)
         playSound()
     }
 
     const slideNextPage = (): void => {
-        if (pageIndex >= props.data.pages.length - 1) return // TODO alert等追加する
         const index = pageIndex + 1
         setPageIndex(index)
         playSound()
@@ -57,7 +56,9 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
         <div>
             <div className={styles.template}>
                 <span className={styles.outside}>
-                    <SlideButton onClick={slidePrevPage}>＜</SlideButton>
+                    {pageIndex !== 0 && 
+                        <SlideButton onClick={slidePrevPage}>＜</SlideButton>
+                    }
                 </span>
                 <div className={styles.slide_wrapper}>
                     <Swiper>
@@ -71,7 +72,9 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                     </Swiper>
                 </div>
                 <span className={styles.outside}>
-                    <SlideButton onClick={slideNextPage}>＞</SlideButton>
+                    {pageIndex !== pageMax && 
+                        <SlideButton onClick={slideNextPage}>＞</SlideButton>
+                    }
                 </span>
             </div>
             <div className={styles.sound_bar}>
