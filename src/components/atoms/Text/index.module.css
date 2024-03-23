@@ -1,7 +1,7 @@
-.text {
+.Text {
+    width: 95%;
     border: none;
     outline: none;
-    width: 95%;
     font-size: 44px;
     background-color: #444444;
     color: #FFFFFF;

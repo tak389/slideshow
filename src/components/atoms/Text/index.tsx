@@ -15,10 +15,10 @@ const Text = (props: Props): JSX.Element => {
 
     useEffect(() => {
         setTextValue(props.children)
-    }, [props.children]) 
+    }, []) 
 
     return (
-        <input type="text" className={styles.text} value={textValue} onChange={(e) => setChangeTextValue(e.target.value) } />
+        <input type="text" className={styles.Text} value={textValue} onChange={(e) => setChangeTextValue(e.target.value) } />
     )
 }
 
