@@ -43,10 +43,7 @@ const SlideShowPage = (): JSX.Element => {
 
   return (
       <div className=''>
-        {jsonData.data.pages.length ?
-          <SlideShowTemplate data={jsonData.data} /> :
-          <></>
-        }
+        {jsonData.data.pages.length && <SlideShowTemplate data={jsonData.data} /> }
       </div>
   )
 }
