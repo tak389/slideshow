@@ -7,7 +7,7 @@ type Props = {
 
 const SlideButton = (props: Props): JSX.Element => {
     return (
-        <button className={` ${styles.prev} ${styles.button}`} onClick={props.onClick}>{props.children}</button>
+        <button className={styles.Button} onClick={props.onClick}>{props.children}</button>
     )
 }
 
