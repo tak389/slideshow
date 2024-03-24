@@ -14,3 +14,23 @@
     outline: none;
     background: transparent;
 }
+
+@media screen and (max-width: 480px) {
+    .Button {
+        width: 90%;
+        height: 4vh;
+        background-color: #222222;
+        outline: none;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    .Button:focus {
+        outline: none;
+        background: transparent;
+    }
+}

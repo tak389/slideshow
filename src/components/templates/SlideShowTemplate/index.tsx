@@ -54,7 +54,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     return (
-        <div>
+        <div className={styles.Template_area}>
             <div className={styles.Template}>
                 <span className={styles.outside}>
                     {pageIndex !== 0 && <SlideButton onClick={slidePrevPage}>＜</SlideButton> }
