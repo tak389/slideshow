@@ -15,7 +15,7 @@ const TextArea = (props: Props): JSX.Element => {
 
     useEffect(() => {
         setTextValue(props.children)
-    }, []) 
+    }, [props.children]) 
 
     return (
         <textarea className={styles.Textarea} value={textValue} onChange={(e) => setChangeTextValue(e.target.value)} />
