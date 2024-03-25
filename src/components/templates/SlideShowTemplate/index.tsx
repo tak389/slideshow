@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import SlideButton from '@/components/atoms/SlideButton'
 import SoundButton from '@/components/atoms/SoundButton'
 import Presentation from '@/components/organisms/Presentation'
+import useSound from 'use-sound'
 import styles from './index.module.css'
 
 type Props = {
@@ -24,6 +25,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     const [data, setData] = useState<Props>(props)
     const pageMax: number = props.data.pages.length - 1
     const scrollArea = Math.floor((100 / props.data.pages.length * 10)) / 10
+    const [play, { stop }] = useSound(props.data.sounds[0].path)
 
     useEffect(() => {
         setData(props)
@@ -47,8 +49,8 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     const playSound = (): void => {
-        const sound = new Audio(props.data.sounds[0].path)
-        sound.play()
+        stop()
+        play()
     }
 
     return (
