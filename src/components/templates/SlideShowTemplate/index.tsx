@@ -3,8 +3,6 @@ import SlideButton from '@/components/atoms/SlideButton'
 import SoundButton from '@/components/atoms/SoundButton'
 import Presentation from '@/components/organisms/Presentation'
 import styles from './index.module.css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
 
 type Props = {
     data: {
@@ -60,15 +58,11 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                     {pageIndex !== 0 && <SlideButton onClick={slidePrevPage}>＜</SlideButton> }
                 </span>
                 <div className={styles.slide_wrapper}>
-                    <Swiper>
-                        <SwiperSlide>
-                            <div className={styles.slide_area} style={scrollStyle}>
-                                {data.data.pages.map((page) => {
-                                    return <Presentation title={page.title} text={page.text} image={page.image} key={page.id} />
-                                })}
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
+                    <div className={styles.slide_area} style={scrollStyle}>
+                        {data.data.pages.map((page) => {
+                            return <Presentation title={page.title} text={page.text} image={page.image} key={page.id} />
+                        })}
+                    </div>
                 </div>
                 <span className={styles.outside}>
                     {pageIndex !== pageMax && <SlideButton onClick={slideNextPage}>＞</SlideButton> }
