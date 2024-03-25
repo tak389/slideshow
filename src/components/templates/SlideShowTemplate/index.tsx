@@ -52,8 +52,8 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
     }
 
     return (
-        <div className={styles.Template_area}>
-            <div className={styles.Template}>
+        <div className={styles.Template}>
+            <div className={styles.template_area}>
                 <span className={styles.outside}>
                     {pageIndex !== 0 && <SlideButton onClick={slidePrevPage}>＜</SlideButton> }
                 </span>
@@ -68,7 +68,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
                     {pageIndex !== pageMax && <SlideButton onClick={slideNextPage}>＞</SlideButton> }
                 </span>
             </div>
-            <div className={styles.Sound_bar}>
+            <div className={styles.Sound_bar_area}>
                 <SoundButton path={props.data.sounds[1].path}></SoundButton>
             </div>
         </div>

@@ -17,13 +17,7 @@
 
 @media screen and (max-width: 480px) {
     .Presentation_area {
-        width: 14.2%;
-        font-size: 16px;
-        display: flex;
         flex-flow: column;
-        text-align: center;
-        align-items: center;
-        background-color: #444444;
     
         .presentation_text_area {
             width: 100%;

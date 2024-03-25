@@ -36,34 +36,6 @@
 @media screen and (max-width: 480px) {
     .Button_area {
         width: 80%;
-        background-color: #FFFFFF;
-        margin: 3vh 0;
-        display: flex;
-        justify-content: center;
         position: sticky;
-    
-        .play_button {
-            background-color: #008000;
-            color: #FFFFFF;
-            margin: 3vh 1vw;
-            width: 20%;
-            border-radius: 5px;
-        }
-    
-        .stop_button {
-            background-color: #FF0000;
-            color: #FFFFFF;
-            margin: 3vh 1vw;
-            width: 20%;
-            border-radius: 5px;
-        }
-    
-        .pause_button {
-            background-color: #C0C0C0;
-            color: #FFFFFF;
-            margin: 3vh 1vw;
-            width: 20%;
-            border-radius: 5px;
-        }
     }
 }
