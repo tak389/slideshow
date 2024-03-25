@@ -29,7 +29,7 @@ const SlideShowTemplate = (props: Props): JSX.Element => {
 
     useEffect(() => {
         setData(props)
-    }, [])
+    }, [props])
 
     const slidePrevPage = (): void => {
         const index = pageIndex - 1
