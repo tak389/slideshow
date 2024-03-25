@@ -14,3 +14,6 @@
 - main、staging、devブランチのみ、github-acitionsで自動テストが走るようにしてあります
 - vercelを使い、URLを公開しております
 - モジュールバンドラーはviteを使用しております
+
+## URL
+- https://slideshow-flax.vercel.app/
