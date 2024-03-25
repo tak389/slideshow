@@ -1,41 +1,53 @@
-.Button_area {
+.Input_area {
     width: 25%;
-    background-color: #FFFFFF;
-    margin: 3vh 0;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
 
-    .play_button {
-        background-color: #008000;
-        color: #FFFFFF;
-        margin: 3vh 1vw;
-        width: 20%;
-        border-radius: 5px;
-        padding: 1vh 1vw;
-    }
+    .Button_area {
+        background-color: #FFFFFF;
+        margin: 3vh 0;
+        display: flex;
+        justify-content: center;
 
-    .stop_button {
-        background-color: #FF0000;
-        color: #FFFFFF;
-        margin: 3vh 1vw;
-        width: 20%;
-        border-radius: 5px;
-        padding: 1vh 1vw;
-    }
+        .play_button {
+            background-color: #008000;
+            color: #FFFFFF;
+            margin: 3vh 1vw;
+            width: 20%;
+            border-radius: 5px;
+            padding: 1vh 1vw;
+        }
 
-    .pause_button {
-        background-color: #C0C0C0;
-        color: #FFFFFF;
-        margin: 3vh 1vw;
-        width: 20%;
-        border-radius: 5px;
-        padding: 1vh 1vw;
+        .stop_button {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            margin: 3vh 1vw;
+            width: 20%;
+            border-radius: 5px;
+            padding: 1vh 1vw;
+        }
+
+        .pause_button {
+            background-color: #C0C0C0;
+            color: #FFFFFF;
+            margin: 3vh 1vw;
+            width: 20%;
+            border-radius: 5px;
+            padding: 1vh 1vw;
+        }
     }
+    .volume_slider {
+        text-align: center;
+    } 
 }
 
 @media screen and (max-width: 480px) {
-    .Button_area {
+    .Input_area {
         width: 80%;
-        position: sticky;
+
+        .Button_area {
+            width: 100%;
+            position: sticky;
+        }
     }
 }
